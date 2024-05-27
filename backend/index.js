@@ -54,6 +54,7 @@ const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
 app.use(express_1.default.static(path_1.default.join(path_1.default.resolve(), "dist")));
+const port = process.env.PORT || 3000;
 //authenticate middleware
 function authenticate(req, res, next) {
     return __awaiter(this, void 0, void 0, function* () {
@@ -314,7 +315,7 @@ app.post("/times-by-date", (req, res) => __awaiter(void 0, void 0, void 0, funct
     //skicka tiderna
     res.send(times);
 }));
-app.listen(3000, () => {
-    console.log("Redo på http://localhost:3000/");
+app.listen(port, () => {
+    console.log("Redo på http://localhost:" + port);
 });
 //# sourceMappingURL=index.js.map

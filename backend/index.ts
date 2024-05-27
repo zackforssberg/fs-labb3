@@ -24,6 +24,8 @@ app.use(express.json());
 
 app.use(express.static(path.join(path.resolve(), "dist")));
 
+const port = process.env.PORT || 3000;
+
 // INTERFACE
 interface MyRequest extends express.Request {
   user?: number;
@@ -409,6 +411,6 @@ app.post("/times-by-date", async (req, res) => {
   res.send(times);
 });
 
-app.listen(3000, () => {
-  console.log("Redo på http://localhost:3000/");
+app.listen(port, () => {
+  console.log("Redo på http://localhost:" + port);
 });
