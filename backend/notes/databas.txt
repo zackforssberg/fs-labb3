@@ -72,3 +72,107 @@ CREATE TABLE tokens (
 
 
 SELECT id, time, open_slots FROM tee_times WHERE DATE(time) = '2024-06-03' ORDER BY id;
+
+
+
+
+
+//
+
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-06 10:00:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-06 10:30:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-06 11:00:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-06 11:30:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-06 12:00:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-06 12:30:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-06 13:00:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-06 13:30:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-06 14:00:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-06 14:30:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-06 15:00:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-06 15:30:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-06 16:00:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-06 16:30:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-06 17:00:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-06 17:30:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-06 18:00:00');
+
+
+//
+
+
+DELETE FROM tee_times WHERE id = 19;
+DELETE FROM tee_times WHERE id = 20;
+DELETE FROM tee_times WHERE id = 21;
+DELETE FROM tee_times WHERE id = 22;
+DELETE FROM tee_times WHERE id = 23;
+DELETE FROM tee_times WHERE id = 24;
+DELETE FROM tee_times WHERE id = 25;
+DELETE FROM tee_times WHERE id = 26;
+DELETE FROM tee_times WHERE id = 27;
+DELETE FROM tee_times WHERE id = 28;
+DELETE FROM tee_times WHERE id = 29;
+DELETE FROM tee_times WHERE id = 30;
+DELETE FROM tee_times WHERE id = 31;
+DELETE FROM tee_times WHERE id = 32;
+DELETE FROM tee_times WHERE id = 33;
+
+
+
+
+
+
+
+
+
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-07 10:00:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-07 10:30:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-07 11:00:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-07 11:30:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-07 12:00:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-07 12:30:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-07 13:00:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-07 13:30:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-07 14:00:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-07 14:30:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-07 15:00:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-07 15:30:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-07 16:00:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-07 16:30:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-07 17:00:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-07 17:30:00');
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-07 18:00:00');

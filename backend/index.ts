@@ -97,8 +97,6 @@ async function authenticate(req: any, res: any, next: any): Promise<void> {
   next();
 }
 
-//render
-
 //skapa konto
 app.post("/create-account", async (req, res) => {
   console.log(req.body);
