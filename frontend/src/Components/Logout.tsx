@@ -18,7 +18,7 @@ function Logout() {
   async function logout() {
     const token: string | undefined = Cookies.get("token");
 
-    const response = await fetch("http://localhost:3000/logout", {
+    const response = await fetch("/logout", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

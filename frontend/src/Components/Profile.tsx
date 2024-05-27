@@ -33,7 +33,7 @@ function Profile() {
   async function fetchUser() {
     const token: string | undefined = Cookies.get("token");
 
-    const response = await fetch("http://localhost:3000/user", {
+    const response = await fetch("/user", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

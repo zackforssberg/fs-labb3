@@ -60,7 +60,7 @@ function TeeTimes({ value }: TeeTimesProps) {
   async function bookTime(id: number) {
     const token: string | undefined = Cookies.get("token");
 
-    const response = await fetch("http://localhost:3000/book-tee-time", {
+    const response = await fetch("/book-tee-time", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -79,7 +79,7 @@ function TeeTimes({ value }: TeeTimesProps) {
   async function fetchBookedTimes() {
     const token: string | undefined = Cookies.get("token");
 
-    const response = await fetch("http://localhost:3000/booked-times", {
+    const response = await fetch("/booked-times", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -102,7 +102,7 @@ function TeeTimes({ value }: TeeTimesProps) {
   async function cancelTime(teeTimeId: number) {
     const token: string | undefined = Cookies.get("token");
 
-    await fetch("http://localhost:3000/cancel", {
+    await fetch("/cancel", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -130,7 +130,7 @@ function TeeTimes({ value }: TeeTimesProps) {
   const [dates, setDates] = useState<string[]>([]);
 
   async function getDates() {
-    const response = await fetch("http://localhost:3000/dates");
+    const response = await fetch("/dates");
     const jsonData: string[] = await response.json();
 
     setDates(jsonData);
@@ -147,7 +147,7 @@ function TeeTimes({ value }: TeeTimesProps) {
   const [fetchedTimes, setFetchedTimes] = useState<MyTeeTimes[] | null>(null);
 
   const fetchTimes = async (date: string | null) => {
-    const response = await fetch("http://localhost:3000/times-by-date", {
+    const response = await fetch("/times-by-date", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

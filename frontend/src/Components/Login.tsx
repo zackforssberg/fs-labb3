@@ -56,7 +56,7 @@ function Login() {
   async function login(email: string, password: string): Promise<void> {
     const token: string = uuidv4();
 
-    const response = await fetch("http://localhost:3000/login", {
+    const response = await fetch("/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

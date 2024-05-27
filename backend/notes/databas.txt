@@ -34,7 +34,7 @@ CREATE TABLE booked_times (
 );
 
 INSERT INTO booked_times (account_id, tee_time_id)
-  VALUES (2, 1);
+  VALUES (1, 1);
 
 
 CREATE TABLE tokens (
