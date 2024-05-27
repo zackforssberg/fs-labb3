@@ -115,7 +115,9 @@ function TeeTimes({ value }: TeeTimesProps) {
 
   function isLoggedIn() {
     const token: string | undefined = Cookies.get("token");
-    if (token != "") {
+    console.log("token" + token);
+
+    if (token && token != "") {
       setLoggedIn(true);
     }
   }
