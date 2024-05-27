@@ -1,0 +1,74 @@
+CREATE TABLE accounts (
+  id serial PRIMARY KEY,
+  email text UNIQUE NOT NULL,
+  password text NOT NULL CHECK(length(password) >= 6),
+  created text NOT NULL DEFAULT CURRENT_DATE
+);
+
+INSERT INTO accounts (email, password)
+  VALUES ('zack@example.com', 'secret');
+
+
+
+CREATE TABLE tee_times (
+  id serial PRIMARY KEY,
+  time TIMESTAMP UNIQUE NOT NULL,
+  open_slots INTEGER NOT NULL DEFAULT 4
+);
+---TIMESTAMP '2004-10-19 10:23:54'---
+
+INSERT INTO tee_times (time)
+  VALUES ('2024-06-07 10:00:00');
+
+
+
+
+
+
+CREATE TABLE booked_times (
+  id serial PRIMARY KEY,
+  account_id INTEGER NOT NULL,
+  tee_time_id INTEGER NOT NULL,
+  FOREIGN KEY(account_id) REFERENCES accounts(id),
+  FOREIGN KEY(tee_time_id) REFERENCES tee_times(id)
+);
+
+INSERT INTO booked_times (account_id, tee_time_id)
+  VALUES (2, 1);
+
+
+CREATE TABLE tokens (
+  account_id INTEGER NOT NULL,
+  token text NOT NULL,
+  FOREIGN KEY(account_id) REFERENCES accounts(id)
+);
+
+
+
+
+
+
+[
+  {
+		"day_string": "2024-06-03"
+	},
+	{
+		"day_string": "2024-06-03"
+	},
+	{
+		"day_string": "2024-06-04"
+	},
+	{
+		"day_string": "2024-06-04"
+	}
+]
+
+
+[
+  "2024-06-03",
+  "2024-06-04"
+]
+
+
+
+SELECT id, time, open_slots FROM tee_times WHERE DATE(time) = '2024-06-03' ORDER BY id;
