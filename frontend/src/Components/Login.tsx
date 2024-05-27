@@ -37,7 +37,7 @@ function Login() {
 
   function checkLoggedInStatus() {
     const token: string | undefined = Cookies.get("token");
-    if (token != "") {
+    if (token && token != "") {
       navigate("/account");
     }
   }
