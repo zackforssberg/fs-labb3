@@ -38,7 +38,7 @@ function Footer() {
         <IMG src="/ITHS-logga.png" alt="raba" />
         <StyledH3>ITHS Golfklubb</StyledH3>
         <p>Golfvägen 123</p>
-        <p>456 78 Golftorp</p>
+        <p>456 78, Golftorp</p>
         <p>042-123 45</p>
         <LinkP>info@ithsgolf.se</LinkP>
       </FooterContainer>
