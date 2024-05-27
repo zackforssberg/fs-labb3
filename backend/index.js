@@ -151,7 +151,9 @@ app.post("/login", (req, res) => __awaiter(void 0, void 0, void 0, function* () 
         try {
             yield client.query("INSERT INTO tokens (account_id, token) VALUES ($1, $2)", [getAccountId(req.body.email, accounts), req.body.token]);
         }
-        catch (error) { }
+        catch (error) {
+            return res.status(400).send("Fel vid inmatning till databas");
+        }
         res.status(200).send("Du är inloggad.");
         console.log("Inloggad med token: " + req.body.token);
     }

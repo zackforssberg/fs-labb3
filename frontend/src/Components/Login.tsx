@@ -67,7 +67,7 @@ function Login() {
     console.log(response.status);
 
     // Kolla om responsen är en 400 Bad Request
-    if (response.status === 401) {
+    if (response.status === 400) {
       console.error("Fel vid inloggning.");
       setLoginSuccess(false);
       setAccessDenied(true);
